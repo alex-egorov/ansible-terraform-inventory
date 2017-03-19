@@ -1,8 +1,22 @@
-# Terraform Inventory
+# Ansible Terraform Inventory
 
-[![Build Status](https://travis-ci.org/adammck/terraform-inventory.svg?branch=master)](https://travis-ci.org/adammck/terraform-inventory)
-[![GitHub release](https://img.shields.io/github/release/adammck/terraform-inventory.svg?maxAge=2592000)](https://github.com/adammck/terraform-inventory/releases)
-[![GitHub release](https://img.shields.io/homebrew/v/terraform-inventory.svg?maxAge=2592000)](http://braumeister.org/formula/terraform-inventory)
+Ansible Dynamic Inventory for Terraform
+
+Mark aws instances with tags like:
+
+```
+tags = {
+	webserver = "ansible"
+	mysql = "ansible"
+}
+```
+
+and this script adds all keys with values 'ansible' to the role of this instance
+
+This is fork of [adammck/terraform-inventory](https://github.com/adammck/terraform-inventory)
+
+
+#############################################################################################
 
 This is a little Go app which generates a dynamic [Ansible] [ansible] inventory
 from a [Terraform] [tf] state file. It allows one to spawn a bunch of instances
